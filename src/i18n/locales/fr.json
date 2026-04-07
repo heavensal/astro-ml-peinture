@@ -1,11 +1,11 @@
 {
 	"Layout": {
 		"skipToContent": "Aller au contenu principal",
-		"ogImageAlt": "[Nom du site] — [description courte]"
+		"ogImageAlt": "ML Entreprise Peinture — Artisan peintre à Marseille"
 	},
 	"LandingPage": {
-		"metaTitle": "[Nom du site] — [accroche principale]",
-		"metaDescription": "[Description SEO : qui vous êtes, ce que vous faites, pour qui. 150-160 caractères.]"
+		"metaTitle": "ML Entreprise Peinture — Artisan peintre à Marseille | Devis gratuit",
+		"metaDescription": "Artisan peintre à Marseille et Bouches-du-Rhône avec 15 ans d'expérience. Rénovation appartement, maison, dégât des eaux. Devis sur mesure gratuit sous 24h."
 	},
 	"LanguageSwitcher": {
 		"ariaLabel": "Choisir la langue",
@@ -16,67 +16,69 @@
 	},
 	"HeroSection": {
 		"ariaLabel": "Accueil",
-		"eyebrow": "[Sous-titre ou catégorie — à modifier]",
-		"tagline": "[Phrase d'accroche principale — à modifier]",
-		"primaryCta": "Nous contacter",
-		"secondaryCta": "En savoir plus"
+		"eyebrow": "Artisan peintre • Marseille & Bouches-du-Rhône",
+		"tagline": "15 ans d'expérience au service de vos projets de rénovation. Assurance professionnelle. Devis gratuit sous 24h.",
+		"primaryCta": "Demander un devis",
+		"secondaryCta": "Nos services"
 	},
 	"LandingServices": {
 		"title": "Nos services",
-		"intro": "[Description de vos services et de ce qui vous différencie — à modifier]",
-		"item1Title": "[Service 1 — à modifier]",
-		"item1Desc": "[Description du service 1 — à modifier]",
-		"item2Title": "[Service 2 — à modifier]",
-		"item2Desc": "[Description du service 2 — à modifier]",
-		"item3Title": "[Service 3 — à modifier]",
-		"item3Desc": "[Description du service 3 — à modifier]",
-		"item4Title": "[Service 4 — à modifier]",
-		"item4Desc": "[Description du service 4 — à modifier]"
+		"intro": "Une expertise complète pour tous vos travaux de peinture et de rénovation. Intervention sur Marseille et l'ensemble des Bouches-du-Rhône.",
+		"item1Title": "Rénovation d'appartement",
+		"item1Desc": "Remise à neuf complète de vos intérieurs : préparation des murs, peinture, finitions soignées pour un résultat impeccable.",
+		"item2Title": "Rénovation de maison",
+		"item2Desc": "Travaux de peinture intérieure et extérieure pour redonner vie à votre maison. Conseils personnalisés sur les couleurs et finitions.",
+		"item3Title": "Dégât des eaux",
+		"item3Desc": "Intervention rapide suite à un sinistre. Traitement des surfaces endommagées, remise en état et peinture de finition.",
+		"item4Title": "Traitement toute dégradation",
+		"item4Desc": "Réparation de fissures, moisissures, décollements. Traitement adapté à chaque support pour un résultat durable."
 	},
 	"LandingProcess": {
 		"title": "Comment ça marche",
-		"intro": "[Expliquez votre processus en quelques étapes simples — à modifier]",
-		"step1Title": "[Étape 1 — à modifier]",
-		"step1Desc": "[Description de l'étape 1 — à modifier]",
-		"step2Title": "[Étape 2 — à modifier]",
-		"step2Desc": "[Description de l'étape 2 — à modifier]",
-		"step3Title": "[Étape 3 — à modifier]",
-		"step3Desc": "[Description de l'étape 3 — à modifier]"
+		"intro": "Un processus simple et transparent pour vos travaux de peinture, du premier contact à la réalisation.",
+		"step1Title": "Prise de contact",
+		"step1Desc": "Appelez-nous ou envoyez un email pour convenir d'un rendez-vous. Nous échangeons sur votre projet.",
+		"step2Title": "Visite sur place",
+		"step2Desc": "Rendez-vous physique sur le lieu des travaux pour évaluer les surfaces à rénover et comprendre vos attentes.",
+		"step3Title": "Relevé des dimensions",
+		"step3Desc": "Mesure précise des surfaces pour établir un chiffrage exact des travaux nécessaires.",
+		"step4Title": "Devis sur mesure",
+		"step4Desc": "Remise d'un devis détaillé, immédiat pour les petits travaux ou sous 24h pour les gros chantiers."
 	},
 	"LandingReviews": {
-		"title": "Ce qu'ils disent de nous",
-		"intro": "[Témoignages de clients satisfaits — à modifier]",
-		"review1Quote": "[Témoignage 1 — à modifier]",
-		"review1Author": "[Nom du client 1]",
-		"review1Role": "[Fonction / entreprise]",
-		"review2Quote": "[Témoignage 2 — à modifier]",
-		"review2Author": "[Nom du client 2]",
-		"review2Role": "[Fonction / entreprise]",
-		"review3Quote": "[Témoignage 3 — à modifier]",
-		"review3Author": "[Nom du client 3]",
-		"review3Role": "[Fonction / entreprise]"
+		"title": "Ils nous font confiance",
+		"intro": "De nombreux clients satisfaits sur Made In Marseille et dans toute la région.",
+		"review1Quote": "Travail soigné et propre. L'équipe a su respecter les délais et le budget annoncé. Je recommande vivement.",
+		"review1Author": "Marie L.",
+		"review1Role": "Rénovation appartement T3, Marseille 8e",
+		"review2Quote": "Intervention rapide suite à un dégât des eaux. Résultat impeccable, on ne voit plus rien. Très professionnel.",
+		"review2Author": "Thomas D.",
+		"review2Role": "Sinistre eau, Aix-en-Provence",
+		"review3Quote": "Excellent rapport qualité-prix. Les conseils sur les couleurs étaient pertinents. Ma maison est transformée.",
+		"review3Author": "Sophie M.",
+		"review3Role": "Rénovation maison, La Ciotat"
 	},
 	"LandingFaq": {
 		"title": "Questions fréquentes",
-		"intro": "Quelques réponses rapides aux questions les plus courantes.",
-		"item1Question": "[Question 1 — à modifier]",
-		"item1Answer": "[Réponse 1 — à modifier]",
-		"item2Question": "[Question 2 — à modifier]",
-		"item2Answer": "[Réponse 2 — à modifier]",
-		"item3Question": "[Question 3 — à modifier]",
-		"item3Answer": "[Réponse 3 — à modifier]",
-		"item4Question": "[Question 4 — à modifier]",
-		"item4Answer": "[Réponse 4 — à modifier]",
+		"intro": "Quelques réponses rapides aux questions les plus courantes sur nos prestations.",
+		"item1Question": "Quelles zones géographiques couvrez-vous ?",
+		"item1Answer": "Nous intervenons sur Marseille et l'ensemble du département des Bouches-du-Rhône (13). Aix-en-Provence, La Ciotat, Aubagne, Martigues, et toutes les communes environnantes.",
+		"item2Question": "Êtes-vous assuré pour les travaux ?",
+		"item2Answer": "Oui, nous disposons d'une assurance responsabilité civile professionnelle qui couvre l'ensemble de nos interventions. Vous pouvez demander une attestation.",
+		"item3Question": "Combien de temps pour recevoir un devis ?",
+		"item3Answer": "Pour les petits travaux, le devis est établi immédiatement après la visite. Pour les chantiers plus importants, vous recevez votre devis détaillé sous 24 heures maximum.",
+		"item4Question": "Intervenez-vous pour les particuliers et les professionnels ?",
+		"item4Answer": "Oui, nous travaillons aussi bien pour les particuliers que pour les syndics, agences immobilières et entreprises. Chaque projet bénéficie de la même attention.",
 		"moreQuestions": "Vous avez d'autres questions ?",
 		"contactCta": "Contactez-nous"
 	},
 	"LandingContact": {
-		"title": "Contactez-nous",
-		"intro": "[Décrivez comment vous contacter et ce à quoi s'attendre — à modifier]",
+		"title": "Demandez votre devis gratuit",
+		"intro": "Contactez-nous par téléphone ou par email pour discuter de votre projet. Nous vous rappelons rapidement pour fixer un rendez-vous sur place.",
 		"emailCta": "Nous écrire"
 	},
 	"SiteFooter": {
-		"tagline": "[Phrase courte résumant votre activité — à modifier]",
+		"tagline": "Artisan peintre à Marseille — 15 ans d'expérience — Assurance Pro",
 		"navAriaLabel": "Mentions légales et politiques",
 		"linkLegalNotice": "Mentions légales",
 		"linkPrivacyPolicy": "Politique de confidentialité",

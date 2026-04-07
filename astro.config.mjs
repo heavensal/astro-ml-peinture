@@ -15,10 +15,10 @@ import sitemap from '@astrojs/sitemap';
  */
 
 // SEO: Production site URL (affects canonical URLs, sitemap, Open Graph)
-const SITE = 'https://YOUR_USER.github.io';
+const SITE = 'https://mlpeinture.fr';
 
 // SEO: Base path (repo name for GitHub Pages, '/' for custom domain)
-const BASE = '/landing-page-template/';
+const BASE = '/';
 
 // https://astro.build/config
 export default defineConfig({

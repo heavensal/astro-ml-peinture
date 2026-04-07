@@ -15,7 +15,7 @@ const telDigits = phone.replace(/\D/g, '');
 
 <section
 	id="contact"
-	class="border-t border-gray-200 bg-emerald-50 px-4 py-20 md:py-24"
+	class="border-t border-gray-200 bg-amber-50 px-4 py-20 md:py-24"
 	aria-labelledby="heading-contact"
 >
 	<div class="container mx-auto max-w-2xl text-center">
@@ -31,7 +31,7 @@ const telDigits = phone.replace(/\D/g, '');
 		<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 			<a
 				href={`mailto:${email}`}
-				class="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-8 py-3 text-base font-medium text-white transition-colors hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+				class="inline-flex items-center justify-center rounded-lg bg-orange-600 px-8 py-3 text-base font-medium text-white transition-colors hover:bg-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
 			>
 				{t('LandingContact.emailCta')}
 			</a>
@@ -39,7 +39,7 @@ const telDigits = phone.replace(/\D/g, '');
 				telDigits.length >= 8 && (
 					<a
 						href={`tel:${telDigits}`}
-						class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-8 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+						class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-8 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
 					>
 						{phone}
 					</a>

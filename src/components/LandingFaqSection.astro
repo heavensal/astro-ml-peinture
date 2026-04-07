@@ -98,7 +98,7 @@ const items = await getFaqItems();
 			{
 				items.map((item: FaqItem) => (
 					<details class="group rounded-lg border border-gray-200 bg-white">
-						<summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left marker:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500">
+						<summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left marker:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500">
 							<span class="text-lg font-medium text-gray-900">
 								{item.question}
 							</span>
@@ -115,7 +115,7 @@ const items = await getFaqItems();
 			<p class="text-sm text-gray-500">{t('LandingFaq.moreQuestions')}</p>
 			<a
 				href="#contact"
-				class="mt-4 inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-gray-700 transition-colors hover:border-gray-400 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+				class="mt-4 inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-gray-700 transition-colors hover:border-gray-400 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
 			>
 				{t('LandingFaq.contactCta')}
 			</a>

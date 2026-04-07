@@ -7,30 +7,30 @@
 export const siteConfig = {
 	// SEO: Site identity
 	/** Displayed name (meta tags, footer, Open Graph) */
-	name: '[Site name — to modify]',
+	name: 'ML Entreprise Peinture',
 	/** Short phrase below main title */
-	tagline: '[A sentence summarizing your activity — to modify]',
+	tagline: 'Artisan peintre à Marseille — 15 ans d'expérience',
 
 	// SEO: Meta description (150-160 chars recommended)
 	/** Default meta description for search engines */
 	defaultDescription:
-		'[Search engine description: who you are, where, what. To modify.]',
+		'ML Entreprise Peinture, artisan peintre à Marseille et Bouches-du-Rhône. Rénovation appartement, maison, dégât des eaux. Devis gratuit sous 24h.',
 
 	// SEO: Language and locale
 	lang: 'fr',
 	locale: 'fr_FR',
 
 	/** Browser theme color (mobile) */
-	themeColor: '#047857',
+	themeColor: '#ea580c',
 
 	// SEO: Contact info (used in footer, contact section, JSON-LD)
 	contact: {
-		email: '[contact@example.com — to modify]',
-		phone: '[+33 1 23 45 67 89 — to modify]',
+		email: 'contact@mlpeinture.fr',
+		phone: '06 11 03 03 69',
 	},
 
 	/** SIRET / legal ID displayed in footer and legal pages */
-	legalId: '[SIRET or legal ID — to modify]',
+	legalId: '790 748 230 RM 13013 — APE 43.34Z',
 
 	// SEO: Social media profiles
 	/** @handle without @; leave empty if no account */

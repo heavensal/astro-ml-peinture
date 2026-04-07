@@ -22,7 +22,7 @@ const telDigits = phone.replace(/\D/g, '');
 			<p class="mb-1">
 				<a
 					href={`mailto:${email}`}
-					class="text-emerald-400 hover:text-emerald-300">{email}</a
+					class="text-orange-400 hover:text-orange-300">{email}</a
 				>
 			</p>
 			<p class="mb-1">
@@ -30,7 +30,7 @@ const telDigits = phone.replace(/\D/g, '');
 					telDigits.length >= 8 ? (
 						<a
 							href={`tel:${telDigits}`}
-							class="text-emerald-400 hover:text-emerald-300"
+							class="text-orange-400 hover:text-orange-300"
 						>
 							{phone}
 						</a>
