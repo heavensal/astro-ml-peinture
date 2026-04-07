@@ -1,0 +1,105 @@
+---
+description: Project-specific instructions for this landing page template
+globs:
+alwaysApply: true
+---
+
+# Cursor Project Instructions
+
+## First Steps
+
+**READ THE README.md FIRST.** It contains essential documentation about:
+- Project structure and file organization
+- Component patterns and the `locale` prop system
+- i18n system and translation files
+- SEO configuration (files marked with `// SEO:` comments)
+- ContentForge API integration
+- Tailwind styling conventions
+
+## Project Overview
+
+Landing page template for conversion-focused marketing sites:
+- Single-language (French) or bilingual (French/English) via `ENABLE_MULTILANG` env var
+- ContentForge API for dynamic FAQ content
+- Complete SEO (Open Graph, JSON-LD, hreflang, sitemap)
+
+## Key Files
+
+| File | Purpose |
+|------|---------|
+| `src/site.config.ts` | SEO: Site metadata, contact, social |
+| `astro.config.mjs` | SEO: Site URL and base path |
+| `src/i18n/locales/*.json` | All translatable text content |
+| `src/layouts/Layout.astro` | SEO: Meta tags, hreflang, JSON-LD |
+| `src/lib/seo.ts` | JSON-LD builders |
+| `src/lib/contentforge.ts` | API integration |
+
+## Component Pattern
+
+All components accept `locale: Locale` prop and use `getFixedT(locale)` for translations:
+
+```astro
+---
+import { getFixedT, type Locale } from '../i18n/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getFixedT(locale);
+---
+```
+
+## Tailwind CSS — STRICT RULES
+
+### ✅ ALWAYS: Native Tailwind Classes Only
+
+```astro
+<div class="flex items-center gap-4 px-6 py-4">
+<button class="rounded-lg bg-emerald-600 hover:bg-emerald-700">
+```
+
+### ❌ NEVER: Arbitrary Values (Brackets)
+
+```astro
+<!-- FORBIDDEN -->
+<div class="w-[347px] text-[#1a2b3c]">
+```
+
+### ❌ NEVER: Inline Styles
+
+```astro
+<!-- FORBIDDEN -->
+<div style="margin: 23px;">
+```
+
+### Animation Priority
+
+1. Native Tailwind: `animate-pulse`, `animate-spin`, `animate-bounce`
+2. Transitions: `transition-colors duration-200 hover:bg-emerald-700`
+3. Keyframes in `global.css`: Only if explicitly requested
+
+## SEO Markers
+
+Look for `// SEO:` comments in code — these indicate elements requiring updates for SEO setup.
+
+## i18n Guidelines
+
+- All user-facing text uses `t('Key.subkey')` translation function
+- Keys organized by component in `src/i18n/locales/fr.json` and `en.json`
+- Component/variable names stay in English
+
+## Conversion Focus
+
+- Guide visitors toward clear conversion actions
+- Primary CTA: `bg-emerald-600 text-white hover:bg-emerald-700`
+- Secondary CTA: `border border-gray-300 hover:bg-gray-50`
+
+## Color Palette
+
+- Primary: `emerald-600`, `emerald-700`
+- Dark: `gray-900`, `gray-950`
+- Light: `white`, `gray-50`
+- Text: `gray-900` (headings), `gray-600` (body)
+- Borders: `gray-200`, `gray-300`

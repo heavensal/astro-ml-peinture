@@ -1,0 +1,30 @@
+---
+/**
+ * LandingHome — Composition layer that assembles all landing page sections.
+ * Import and arrange sections as needed for your specific landing page.
+ */
+import { type Locale } from '../i18n/i18n';
+import HeroSection from './HeroSection.astro';
+import LandingServicesSection from './LandingServicesSection.astro';
+import LandingProcessSection from './LandingProcessSection.astro';
+import LandingReviewsSection from './LandingReviewsSection.astro';
+import LandingFaqSection from './LandingFaqSection.astro';
+import LandingContactSection from './LandingContactSection.astro';
+import SiteFooter from './SiteFooter.astro';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<HeroSection locale={locale} />
+<main id="main-content">
+	<LandingServicesSection locale={locale} />
+	<LandingProcessSection locale={locale} />
+	<LandingReviewsSection locale={locale} />
+	<LandingFaqSection locale={locale} />
+	<LandingContactSection locale={locale} />
+</main>
+<SiteFooter locale={locale} />

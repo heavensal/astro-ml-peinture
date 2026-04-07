@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { pageHref } from '../lib/paths';
+import { siteConfig } from '../site.config';
+
+const title = `Conditions générales | ${siteConfig.name}`;
+const description = `Conditions générales de vente ou de prestation — ${siteConfig.name}.`;
+---
+
+<Layout {title} {description}>
+	<main class="min-h-screen">
+		<article class="container mx-auto max-w-3xl px-4 py-12 md:py-16">
+			<header class="mb-10">
+				<a href={pageHref('')} class="text-emerald-600 hover:text-emerald-700 text-sm font-medium mb-4 inline-block">
+					← Retour à l'accueil
+				</a>
+				<h1 class="text-3xl md:text-4xl font-bold text-gray-900">Conditions générales</h1>
+				<p class="text-gray-500 mt-2">Dernière mise à jour : [date — à modifier]</p>
+			</header>
+
+			<div class="prose prose-gray max-w-none space-y-8 text-gray-700">
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">1. Objet</h2>
+					<p>
+						Les présentes conditions régissent les relations entre <strong>{siteConfig.name}</strong> et ses clients pour
+						[prestations / ventes — à préciser].
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">2. Commande et devis</h2>
+					<p>[Modalités de commande, validité des devis, acomptes — à modifier.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">3. Prix et paiement</h2>
+					<p>[TVA, modalités et délais de paiement, pénalités — à modifier.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">4. Exécution et délais</h2>
+					<p>[Délais de réalisation, reports, force majeure — à modifier.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">5. Droit de rétractation</h2>
+					<p>[Si applicable — consommateurs B2C, délais, exceptions — à modifier ou supprimer.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">6. Garanties et responsabilité</h2>
+					<p>[Garanties légales, limites — à modifier selon votre activité.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">7. Réclamations</h2>
+					<p>[Procédure et délais pour adresser une réclamation — à modifier.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">8. Droit applicable et litiges</h2>
+					<p>[Droit français, tribunaux compétents, médiation éventuelle — à modifier.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">9. Contact</h2>
+					<p>
+						{siteConfig.name} —{' '}
+						<a href={`mailto:${siteConfig.contact.email}`} class="text-emerald-600 hover:underline">{siteConfig.contact.email}</a>
+						{' — '}
+						{siteConfig.contact.phone}
+					</p>
+				</section>
+			</div>
+		</article>
+	</main>
+</Layout>

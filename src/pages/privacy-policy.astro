@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { pageHref } from '../lib/paths';
+import { siteConfig } from '../site.config';
+
+const title = `Politique de confidentialité | ${siteConfig.name}`;
+const description = `Politique de confidentialité et données personnelles — ${siteConfig.name}.`;
+---
+
+<Layout {title} {description}>
+	<main class="min-h-screen">
+		<article class="container mx-auto max-w-3xl px-4 py-12 md:py-16">
+			<header class="mb-10">
+				<a href={pageHref('')} class="text-emerald-600 hover:text-emerald-700 text-sm font-medium mb-4 inline-block">
+					← Retour à l'accueil
+				</a>
+				<h1 class="text-3xl md:text-4xl font-bold text-gray-900">Politique de confidentialité</h1>
+				<p class="text-gray-500 mt-2">Dernière mise à jour : [date — à modifier]</p>
+			</header>
+
+			<div class="prose prose-gray max-w-none space-y-8 text-gray-700">
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">1. Responsable du traitement</h2>
+					<p>
+						<strong>{siteConfig.name}</strong><br />
+						Contact :{' '}
+						<a href={`mailto:${siteConfig.contact.email}`} class="text-emerald-600 hover:underline">{siteConfig.contact.email}</a>
+						<br />
+						[Délégué à la protection des données (DPO) — à modifier si applicable]
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">2. Données collectées</h2>
+					<p>
+						[Liste des données : formulaire de contact, newsletter, cookies, statistiques — à modifier selon vos outils réels.]
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">3. Finalités et bases légales</h2>
+					<p>
+						[Ex. réponse aux demandes, exécution de contrat, obligations légales, prospection avec consentement — à modifier.]
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">4. Durée de conservation</h2>
+					<p>[Durées par type de données — à modifier.]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">5. Destinataires et sous-traitants</h2>
+					<p>
+						[Hébergeur, outils email/CRM, analytics — à modifier. Préciser si transferts hors UE et garanties.]
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">6. Vos droits (RGPD)</h2>
+					<p>
+						Droits d'accès, rectification, effacement, limitation, opposition, portabilité : contactez-nous à l'adresse ci-dessus.
+						Réclamation auprès de la CNIL :{' '}
+						<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">cnil.fr</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">7. Cookies</h2>
+					<p>
+						[Types de cookies utilisés, durée, bandeau / refus — à modifier. Si site statique sans cookies non essentiels, l'indiquer clairement.]
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">8. Sécurité</h2>
+					<p>[Mesures techniques et organisationnelles — à modifier ou compléter.]</p>
+				</section>
+			</div>
+		</article>
+	</main>
+</Layout>

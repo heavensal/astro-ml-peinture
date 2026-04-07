@@ -1,0 +1,92 @@
+# Codex Astro Base Template Instructions
+
+These instructions apply to Codex and other agentic coding tools that read `AGENTS.md`.
+They are reusable base instructions for Astro projects.
+
+## First Steps
+
+**READ THE README.md FIRST.** It contains essential documentation about:
+- Project structure and file organization
+- Component patterns and usage
+- i18n system and translation files
+- SEO configuration (files marked with `// SEO:` comments)
+- ContentForge API integration
+- Styling guidelines and Tailwind conventions
+
+## Architecture and Components
+
+- Follow the existing project structure, code style, and component patterns.
+- Keep changes focused and minimal.
+- Reuse existing components and styling patterns before introducing new ones.
+- Avoid unnecessary abstractions, helpers, or dependencies.
+- Each component should represent one section focused on a single subject, theme, or customer conversion step.
+- Create a separate component whenever a new subject, theme, or conversion step is introduced.
+- Do not exceed 150 lines of code per file.
+- Refactor as soon as a generated feature would push a file beyond 150 lines of code.
+
+## Tailwind CSS — STRICT RULES
+
+This project uses **Tailwind CSS 4** with strict conventions:
+
+### ✅ ALWAYS: Use Native Tailwind Classes Only
+
+```astro
+<div class="flex items-center gap-4 px-6 py-4 text-gray-900">
+<button class="rounded-lg bg-emerald-600 px-4 py-2 hover:bg-emerald-700">
+```
+
+### ❌ NEVER: Use Arbitrary Values (Brackets)
+
+```astro
+<!-- FORBIDDEN -->
+<div class="w-[347px] mt-[23px] text-[#1a2b3c] bg-[rgb(255,0,0)]">
+```
+
+### ❌ NEVER: Use Inline Styles
+
+```astro
+<!-- FORBIDDEN -->
+<div style="margin-top: 23px;">
+<div style={{ marginTop: '23px' }}>
+```
+
+### Animation Priority Order
+
+1. **First**: Use native Tailwind animations (`animate-pulse`, `animate-spin`, `animate-bounce`)
+2. **Second**: Use Tailwind transitions (`transition-colors`, `transition-transform`, `duration-200`)
+3. **Last resort only**: Create custom `@keyframes` in `global.css` (only if explicitly requested or Tailwind cannot cover the animation)
+
+```css
+/* Only if native Tailwind cannot cover the animation */
+@keyframes custom-animation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+```
+
+### If User Requests Non-Standard Styling
+
+Only deviate from these rules if the user **explicitly requests**:
+- Arbitrary values for a specific use case
+- Custom utility layers or design tokens
+- Complex animations requiring keyframes
+
+## SEO and Accessibility
+
+- Preserve responsive behavior and accessibility.
+- Every HTML generation must follow the best possible SEO and accessibility practices.
+- Use semantic HTML elements (`<section>`, `<header>`, `<nav>`, `<main>`, `<footer>`).
+- Include proper ARIA labels and landmark roles.
+- Ensure all interactive elements have focus states.
+
+## i18n Guidelines
+
+- All user-facing text must use translation keys via `getFixedT(locale)`.
+- Component and variable names remain in English regardless of content language.
+- Translation keys are organized by component name in JSON files.
+
+## Change Safety
+
+- Do not perform large refactors unless explicitly requested.
+- Do not overwrite user changes unless explicitly asked to do so.
+- Keep existing file structure and naming conventions.

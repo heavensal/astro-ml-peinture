@@ -1,0 +1,39 @@
+---
+description: Reusable Astro base template instructions for architecture, SEO, accessibility, Tailwind, and change safety
+globs:
+alwaysApply: true
+---
+
+# Cursor Astro Base Template Instructions
+
+These are reusable base instructions for Astro projects, not project-specific rules.
+Project-specific instructions should be added separately later.
+
+## Architecture and Components
+
+- Follow the existing codebase structure and styling conventions.
+- Keep edits minimal, targeted, and consistent with the current implementation.
+- Reuse existing components and patterns before creating new ones.
+- Avoid unnecessary abstractions and dependencies.
+- Each component should represent one section focused on a single subject, theme, or customer conversion step.
+- Create a separate component whenever a new subject, theme, or conversion step is introduced.
+- Do not exceed 150 lines of code per file.
+- Refactor as soon as a generated feature would push a file beyond 150 lines of code.
+
+## SEO and Accessibility
+
+- Preserve accessibility and responsiveness.
+- Every HTML generation must follow the best possible SEO and accessibility practices.
+
+## Tailwind CSS
+
+- Use the latest Tailwind CSS version supported by the project.
+- Follow the current Tailwind conventions already used in this repository.
+- Do not create Tailwind utility variables, custom utility layers, or extra design tokens by default.
+- Create Tailwind utility variables only if the user explicitly asks for them.
+- Create custom animations only if Tailwind cannot cover the requested animation.
+
+## Change Safety
+
+- Avoid broad refactors unless explicitly requested.
+- Do not overwrite user changes unless explicitly instructed.

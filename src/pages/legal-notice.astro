@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { pageHref } from '../lib/paths';
+import { siteConfig } from '../site.config';
+
+const title = `Mentions légales | ${siteConfig.name}`;
+const description = `Mentions légales du site ${siteConfig.name}.`;
+---
+
+<Layout {title} {description}>
+	<main class="min-h-screen">
+		<article class="container mx-auto max-w-3xl px-4 py-12 md:py-16">
+			<header class="mb-10">
+				<a href={pageHref('')} class="text-emerald-600 hover:text-emerald-700 text-sm font-medium mb-4 inline-block">
+					← Retour à l'accueil
+				</a>
+				<h1 class="text-3xl md:text-4xl font-bold text-gray-900">Mentions légales</h1>
+				<p class="text-gray-500 mt-2">Dernière mise à jour : [date — à modifier]</p>
+			</header>
+
+			<div class="prose prose-gray max-w-none space-y-8 text-gray-700">
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">1. Éditeur du site</h2>
+					<p>
+						Le site est édité par :<br />
+						<strong>{siteConfig.name}</strong><br />
+						[{siteConfig.legalId}]<br />
+						[Forme juridique, capital social — à modifier]<br />
+						[Adresse du siège — à modifier]<br />
+						Contact :{' '}
+						<a href={`mailto:${siteConfig.contact.email}`} class="text-emerald-600 hover:underline">{siteConfig.contact.email}</a>
+						{' — '}
+						{siteConfig.contact.phone}
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">2. Directeur de la publication</h2>
+					<p>[Nom et qualité du responsable — à modifier]</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">3. Hébergement</h2>
+					<p>
+						Site statique hébergé sur GitHub Pages (GitHub, Inc.). Pour une mention détaillée conforme à votre contexte :<br />
+						[Raison sociale, adresse, contact de l'hébergeur — à modifier si vous utilisez un autre hébergeur]
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">4. Propriété intellectuelle</h2>
+					<p>
+						L'ensemble du contenu de ce site (textes, images, structure) est protégé. Toute reproduction sans autorisation de
+						l'éditeur est interdite sauf exceptions prévues par la loi.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">5. Limitation de responsabilité</h2>
+					<p>
+						L'éditeur s'efforce d'assurer l'exactitude des informations. Elles sont fournies à titre indicatif et peuvent être
+						modifiées sans préavis.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-semibold text-gray-900 mb-2">6. Liens hypertextes</h2>
+					<p>
+						Les liens sortants ne constituent pas une approbation du contenu ciblé. Les liens entrants vers ce site peuvent
+						nécessiter une autorisation préalable [à adapter selon votre politique].
+					</p>
+				</section>
+			</div>
+		</article>
+	</main>
+</Layout>

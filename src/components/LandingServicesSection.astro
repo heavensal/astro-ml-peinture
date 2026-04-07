@@ -1,0 +1,55 @@
+---
+import { getFixedT, type Locale } from '../i18n/i18n';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getFixedT(locale);
+
+const serviceKeys = ['item1', 'item2', 'item3', 'item4'] as const;
+
+const services = serviceKeys
+	.map((key) => {
+		const titleKey = `LandingServices.${key}Title`;
+		const descKey = `LandingServices.${key}Desc`;
+		const title = t(titleKey);
+		const description = t(descKey);
+		if (title === titleKey) return null;
+		return { title, description: description !== descKey ? description : '' };
+	})
+	.filter((s): s is { title: string; description: string } => s !== null);
+---
+
+<section
+	id="services"
+	class="border-t border-gray-200 bg-white px-4 py-20 md:py-24"
+	aria-labelledby="heading-services"
+>
+	<div class="container mx-auto max-w-4xl">
+		<header class="mx-auto mb-12 max-w-2xl text-center md:mb-14">
+			<h2
+				id="heading-services"
+				class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl"
+			>
+				{t('LandingServices.title')}
+			</h2>
+			<p class="leading-relaxed text-gray-600">{t('LandingServices.intro')}</p>
+		</header>
+		<div class="grid gap-8 md:grid-cols-2">
+			{
+				services.map((service) => (
+					<div class="rounded-lg border border-gray-200 bg-gray-50 p-6">
+						<h3 class="mb-2 text-lg font-semibold text-gray-900">
+							{service.title}
+						</h3>
+						{service.description && (
+							<p class="text-gray-600">{service.description}</p>
+						)}
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

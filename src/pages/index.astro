@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LandingHome from '../components/LandingHome.astro';
+import { getFixedT, isMultilangEnabled, type Locale } from '../i18n/i18n';
+import { getAlternateLanguageUrls, buildLandingJsonLd } from '../lib/seo';
+
+const locale: Locale = 'fr';
+const t = getFixedT(locale);
+
+const alternates = getAlternateLanguageUrls(Astro.site);
+const multilangEnabled = isMultilangEnabled();
+
+const alternateLanguages = alternates
+	? [
+			{ hreflang: 'fr', href: alternates.fr },
+			{ hreflang: 'x-default', href: alternates.fr },
+			...(multilangEnabled ? [{ hreflang: 'en', href: alternates.en }] : []),
+		]
+	: undefined;
+
+const jsonLd = alternates ? buildLandingJsonLd(alternates) : undefined;
+---
+
+<Layout
+	lang="fr"
+	ogLocale="fr_FR"
+	ogLocaleAlternate={multilangEnabled ? 'en_US' : undefined}
+	title={t('LandingPage.metaTitle')}
+	description={t('LandingPage.metaDescription')}
+	alternateLanguages={alternateLanguages}
+	jsonLd={jsonLd}
+	skipToContentLabel={t('Layout.skipToContent')}
+	ogImageAlt={t('Layout.ogImageAlt')}
+>
+	<LandingHome locale={locale} />
+</Layout>

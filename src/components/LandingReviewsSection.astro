@@ -1,0 +1,70 @@
+---
+import { getFixedT, type Locale } from '../i18n/i18n';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getFixedT(locale);
+
+const reviewKeys = ['review1', 'review2', 'review3'] as const;
+
+const reviews = reviewKeys
+	.map((key) => {
+		const quoteKey = `LandingReviews.${key}Quote`;
+		const authorKey = `LandingReviews.${key}Author`;
+		const roleKey = `LandingReviews.${key}Role`;
+		const quote = t(quoteKey);
+		const author = t(authorKey);
+		const role = t(roleKey);
+		if (quote === quoteKey) return null;
+		return {
+			quote,
+			author: author !== authorKey ? author : '',
+			role: role !== roleKey ? role : '',
+		};
+	})
+	.filter(
+		(r): r is { quote: string; author: string; role: string } => r !== null,
+	);
+---
+
+<section
+	id="reviews"
+	class="border-t border-gray-200 bg-gray-50 px-4 py-20 md:py-24"
+	aria-labelledby="heading-reviews"
+>
+	<div class="container mx-auto max-w-4xl">
+		<header class="mx-auto mb-12 max-w-2xl text-center md:mb-14">
+			<h2
+				id="heading-reviews"
+				class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl"
+			>
+				{t('LandingReviews.title')}
+			</h2>
+			<p class="leading-relaxed text-gray-600">{t('LandingReviews.intro')}</p>
+		</header>
+		<div class="grid gap-8 md:grid-cols-3">
+			{
+				reviews.map((review) => (
+					<blockquote class="rounded-lg border border-gray-200 bg-white p-6">
+						<p class="mb-4 text-gray-700 italic">"{review.quote}"</p>
+						{(review.author || review.role) && (
+							<footer class="text-sm">
+								{review.author && (
+									<cite class="font-semibold text-gray-900 not-italic">
+										{review.author}
+									</cite>
+								)}
+								{review.role && (
+									<span class="block text-gray-500">{review.role}</span>
+								)}
+							</footer>
+						)}
+					</blockquote>
+				))
+			}
+		</div>
+	</div>
+</section>

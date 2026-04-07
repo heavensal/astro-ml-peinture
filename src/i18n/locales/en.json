@@ -1,0 +1,85 @@
+{
+	"Layout": {
+		"skipToContent": "Skip to main content",
+		"ogImageAlt": "[Site name] — [short description]"
+	},
+	"LandingPage": {
+		"metaTitle": "[Site name] — [main tagline]",
+		"metaDescription": "[SEO description: who you are, what you do, for whom. 150-160 characters.]"
+	},
+	"LanguageSwitcher": {
+		"ariaLabel": "Choose language",
+		"labelFr": "FR",
+		"labelEn": "EN",
+		"titleFr": "View site in French",
+		"titleEn": "View site in English"
+	},
+	"HeroSection": {
+		"ariaLabel": "Home",
+		"eyebrow": "[Subtitle or category — to modify]",
+		"tagline": "[Main tagline — to modify]",
+		"primaryCta": "Contact us",
+		"secondaryCta": "Learn more"
+	},
+	"LandingServices": {
+		"title": "Our services",
+		"intro": "[Description of your services and what sets you apart — to modify]",
+		"item1Title": "[Service 1 — to modify]",
+		"item1Desc": "[Service 1 description — to modify]",
+		"item2Title": "[Service 2 — to modify]",
+		"item2Desc": "[Service 2 description — to modify]",
+		"item3Title": "[Service 3 — to modify]",
+		"item3Desc": "[Service 3 description — to modify]",
+		"item4Title": "[Service 4 — to modify]",
+		"item4Desc": "[Service 4 description — to modify]"
+	},
+	"LandingProcess": {
+		"title": "How it works",
+		"intro": "[Explain your process in a few simple steps — to modify]",
+		"step1Title": "[Step 1 — to modify]",
+		"step1Desc": "[Step 1 description — to modify]",
+		"step2Title": "[Step 2 — to modify]",
+		"step2Desc": "[Step 2 description — to modify]",
+		"step3Title": "[Step 3 — to modify]",
+		"step3Desc": "[Step 3 description — to modify]"
+	},
+	"LandingReviews": {
+		"title": "What they say about us",
+		"intro": "[Testimonials from satisfied customers — to modify]",
+		"review1Quote": "[Testimonial 1 — to modify]",
+		"review1Author": "[Customer name 1]",
+		"review1Role": "[Role / company]",
+		"review2Quote": "[Testimonial 2 — to modify]",
+		"review2Author": "[Customer name 2]",
+		"review2Role": "[Role / company]",
+		"review3Quote": "[Testimonial 3 — to modify]",
+		"review3Author": "[Customer name 3]",
+		"review3Role": "[Role / company]"
+	},
+	"LandingFaq": {
+		"title": "Frequently asked questions",
+		"intro": "Quick answers to the most common questions.",
+		"item1Question": "[Question 1 — to modify]",
+		"item1Answer": "[Answer 1 — to modify]",
+		"item2Question": "[Question 2 — to modify]",
+		"item2Answer": "[Answer 2 — to modify]",
+		"item3Question": "[Question 3 — to modify]",
+		"item3Answer": "[Answer 3 — to modify]",
+		"item4Question": "[Question 4 — to modify]",
+		"item4Answer": "[Answer 4 — to modify]",
+		"moreQuestions": "Have more questions?",
+		"contactCta": "Contact us"
+	},
+	"LandingContact": {
+		"title": "Contact us",
+		"intro": "[Describe how to contact you and what to expect — to modify]",
+		"emailCta": "Email us"
+	},
+	"SiteFooter": {
+		"tagline": "[Short phrase summarizing your activity — to modify]",
+		"navAriaLabel": "Legal notices and policies",
+		"linkLegalNotice": "Legal notice",
+		"linkPrivacyPolicy": "Privacy policy",
+		"linkTermsOfService": "Terms of service"
+	}
+}

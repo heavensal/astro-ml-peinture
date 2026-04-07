@@ -1,0 +1,65 @@
+---
+import { getFixedT, type Locale } from '../i18n/i18n';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getFixedT(locale);
+
+const stepKeys = ['step1', 'step2', 'step3'] as const;
+
+const steps = stepKeys
+	.map((key, index) => {
+		const titleKey = `LandingProcess.${key}Title`;
+		const descKey = `LandingProcess.${key}Desc`;
+		const title = t(titleKey);
+		const description = t(descKey);
+		if (title === titleKey) return null;
+		return {
+			number: index + 1,
+			title,
+			description: description !== descKey ? description : '',
+		};
+	})
+	.filter(
+		(s): s is { number: number; title: string; description: string } =>
+			s !== null,
+	);
+---
+
+<section
+	id="process"
+	class="border-t border-gray-200 bg-white px-4 py-20 md:py-24"
+	aria-labelledby="heading-process"
+>
+	<div class="container mx-auto max-w-4xl">
+		<header class="mx-auto mb-12 max-w-2xl text-center md:mb-14">
+			<h2
+				id="heading-process"
+				class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl"
+			>
+				{t('LandingProcess.title')}
+			</h2>
+			<p class="leading-relaxed text-gray-600">{t('LandingProcess.intro')}</p>
+		</header>
+		<div class="grid gap-8 md:grid-cols-3">
+			{
+				steps.map((step) => (
+					<div class="text-center">
+						<div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-xl font-bold text-emerald-600">
+							{step.number}
+						</div>
+						<h3 class="mb-2 text-lg font-semibold text-gray-900">
+							{step.title}
+						</h3>
+						{step.description && (
+							<p class="text-gray-600">{step.description}</p>
+						)}
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
