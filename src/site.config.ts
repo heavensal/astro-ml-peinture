@@ -9,7 +9,7 @@ export const siteConfig = {
 	/** Displayed name (meta tags, footer, Open Graph) */
 	name: 'ML Entreprise Peinture',
 	/** Short phrase below main title */
-	tagline: 'Artisan peintre à Marseille — 15 ans d'expérience',
+	tagline: "Artisan peintre à Marseille — 15 ans d'expérience",
 
 	// SEO: Meta description (150-160 chars recommended)
 	/** Default meta description for search engines */
