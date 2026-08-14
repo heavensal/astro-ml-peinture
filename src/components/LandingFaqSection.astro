@@ -1,5 +1,8 @@
 ---
-import { contentforgeApiUrl } from '../lib/contentforge';
+import {
+	contentforgeApiUrl,
+	isContentforgeEnabled,
+} from '../lib/contentforge';
 import { getFixedT, type Locale } from '../i18n/i18n';
 
 interface Props {
@@ -39,7 +42,11 @@ const apiToken = import.meta.env.CONTENTFORGE_API_TOKEN;
 
 const getFaqItems = async (): Promise<FaqItem[]> => {
 	const fallback = getFallbackItems();
-	if (!apiToken || typeof apiToken !== 'string') {
+	if (
+		!isContentforgeEnabled() ||
+		!apiToken ||
+		typeof apiToken !== 'string'
+	) {
 		return fallback;
 	}
 	try {

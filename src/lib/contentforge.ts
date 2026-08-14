@@ -1,6 +1,14 @@
 const DEFAULT_URL = 'https://contentforge.1344.fr/api/v1';
 
 /**
+ * When `"true"`, FAQ (and future API-driven blocks) may fetch from ContentForge.
+ * Otherwise i18n fallback is used. A valid `CONTENTFORGE_API_TOKEN` is still required to call the API.
+ */
+export function isContentforgeEnabled(): boolean {
+	return import.meta.env.CONTENTFORGE_ENABLED === 'true';
+}
+
+/**
  * Build full Contentforge API URL for a given endpoint path.
  * Uses CONTENTFORGE_URL env variable with fallback to default.
  */

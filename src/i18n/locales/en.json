@@ -71,9 +71,26 @@
 		"contactCta": "Contact us"
 	},
 	"LandingContact": {
-		"title": "Contact us",
-		"intro": "[Describe how to contact you and what to expect — to modify]",
+		"title": "Request a free quote",
+		"intro": "Contact us by phone or email to discuss your project. We will call you back quickly to schedule an on-site visit.",
 		"emailCta": "Email us"
+	},
+	"ContactForm": {
+		"openCta": "Request a quote",
+		"dialogTitle": "Quote request",
+		"fieldName": "Name",
+		"fieldEmail": "Email",
+		"fieldPhone": "Phone",
+		"fieldMessage": "Your project",
+		"messagePlaceholder": "Type of work, surface, preferred timeline, site address…",
+		"submit": "Send",
+		"close": "Close",
+		"sending": "Sending…",
+		"success": "Thank you! Your message has been sent.",
+		"error": "Something went wrong. Please try again or call us.",
+		"errorNetwork": "Network error. Check your connection.",
+		"errorConfig": "Form not configured (missing PUBLIC_CONTACT_FORM_URL or PUBLIC_CONTACT_FORM_TOKEN).",
+		"emailSubject": "Quote — ML Entreprise Peinture"
 	},
 	"SiteFooter": {
 		"tagline": "[Short phrase summarizing your activity — to modify]",

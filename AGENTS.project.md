@@ -71,9 +71,9 @@ Files containing `// SEO:` comments indicate elements requiring updates:
 ## ContentForge API
 
 The FAQ section supports API-driven content with fallback:
-- Set `CONTENTFORGE_API_TOKEN` in `.env` to enable
-- API data fetched at build time
-- Falls back to translation file if API unavailable
+- Set `CONTENTFORGE_ENABLED=true` and `CONTENTFORGE_API_TOKEN` in `.env` to fetch at build time
+- Set `CONTENTFORGE_ENABLED=false` to always use translation file FAQ (no network call)
+- Contact form POSTs to ContentForge `send_form` via `PUBLIC_CONTACT_FORM_URL` / `PUBLIC_CONTACT_FORM_TOKEN`
 
 ## Conversion Focus
 

@@ -77,6 +77,23 @@
 		"intro": "Contactez-nous par téléphone ou par email pour discuter de votre projet. Nous vous rappelons rapidement pour fixer un rendez-vous sur place.",
 		"emailCta": "Nous écrire"
 	},
+	"ContactForm": {
+		"openCta": "Demander un devis",
+		"dialogTitle": "Demande de devis",
+		"fieldName": "Nom",
+		"fieldEmail": "Email",
+		"fieldPhone": "Téléphone",
+		"fieldMessage": "Votre projet",
+		"messagePlaceholder": "Type de travaux, surface, délais souhaités, adresse du chantier…",
+		"submit": "Envoyer",
+		"close": "Fermer",
+		"sending": "Envoi en cours…",
+		"success": "Merci ! Votre message a bien été transmis.",
+		"error": "L'envoi a échoué. Réessayez ou appelez-nous.",
+		"errorNetwork": "Erreur réseau. Vérifiez votre connexion.",
+		"errorConfig": "Le formulaire n’est pas configuré (PUBLIC_CONTACT_FORM_URL ou PUBLIC_CONTACT_FORM_TOKEN manquant).",
+		"emailSubject": "Devis — ML Entreprise Peinture"
+	},
 	"SiteFooter": {
 		"tagline": "Artisan peintre à Marseille — 15 ans d'expérience — Assurance Pro",
 		"navAriaLabel": "Mentions légales et politiques",

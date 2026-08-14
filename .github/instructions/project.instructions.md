@@ -63,7 +63,7 @@ Files containing `// SEO:` comments indicate elements requiring updates:
 ## ContentForge API
 
 FAQ section supports API-driven content:
-- Set `CONTENTFORGE_API_TOKEN` in `.env` to enable
+- Set `CONTENTFORGE_ENABLED=true` and `CONTENTFORGE_API_TOKEN` in `.env` to fetch FAQ; `CONTENTFORGE_ENABLED=false` uses i18n only
 - Falls back to translation file if API unavailable
 
 ## Tailwind Styling

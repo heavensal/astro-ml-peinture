@@ -20,7 +20,7 @@ alwaysApply: true
 
 Landing page template for conversion-focused marketing sites:
 - Single-language (French) or bilingual (French/English) via `ENABLE_MULTILANG` env var
-- ContentForge API for dynamic FAQ content
+- ContentForge API for dynamic FAQ when `CONTENTFORGE_ENABLED=true` and token set; else i18n FAQ
 - Complete SEO (Open Graph, JSON-LD, hreflang, sitemap)
 
 ## Key Files
