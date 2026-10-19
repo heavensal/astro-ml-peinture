@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import { getFixedT } from '../i18n/i18n';
+import { siteConfig } from '../site.config';
+interface Props { kind: 'legal' | 'privacy' | 'terms' }
+const { kind } = Astro.props;
+const t = getFixedT('fr');
+const sections = t(`Legal.${kind}Sections`, { returnObjects: true }) as { title: string; body: string }[];
+// TODO: Replace all bracketed legal placeholders with owner-approved information before launch.
+---
+<Layout title={`${t(`Legal.${kind}Title`)} | ${siteConfig.name}`} description={t(`Legal.${kind}Description`)} robots="noindex, follow">
+  <SiteHeader locale="fr" />
+  <main id="main-content" class="mx-auto max-w-3xl px-5 py-16">
+    <h1 class="font-serif text-4xl">{t(`Legal.${kind}Title`)}</h1>
+    <p class="my-8 rounded-lg bg-amber-50 p-4 text-sm text-amber-950">{t('Legal.draft')}</p>
+    {sections.map(section => <section class="mb-8"><h2 class="mb-3 text-xl font-semibold">{section.title}</h2><p class="leading-relaxed text-stone-600">{section.body}</p></section>)}
+    <h2 class="mb-3 text-xl font-semibold">{t('Legal.contact')}</h2>
+    <p>{siteConfig.name} · {siteConfig.legalId}</p>
+    <a href={`mailto:${siteConfig.contact.email}`} class="underline">{siteConfig.contact.email}</a>
+  </main>
+  <SiteFooter locale="fr" />
+</Layout>

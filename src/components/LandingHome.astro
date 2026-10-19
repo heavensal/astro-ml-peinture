@@ -4,6 +4,9 @@
  * Import and arrange sections as needed for your specific landing page.
  */
 import { type Locale } from '../i18n/i18n';
+import SiteHeader from './SiteHeader.astro';
+import LandingProjectsSection from './LandingProjectsSection.astro';
+import LandingAreasSection from './LandingAreasSection.astro';
 import HeroSection from './HeroSection.astro';
 import LandingServicesSection from './LandingServicesSection.astro';
 import LandingProcessSection from './LandingProcessSection.astro';
@@ -19,10 +22,13 @@ interface Props {
 const { locale } = Astro.props;
 ---
 
-<HeroSection locale={locale} secondaryHref="#services" />
+<SiteHeader {locale} />
 <main id="main-content">
+  <HeroSection {locale} />
 	<LandingServicesSection locale={locale} />
-	<LandingProcessSection locale={locale} />
+	<LandingProjectsSection {locale} />
+  <LandingProcessSection locale={locale} />
+  <LandingAreasSection {locale} />
 	<LandingReviewsSection locale={locale} />
 	<LandingFaqSection locale={locale} />
 	<LandingContactSection locale={locale} />

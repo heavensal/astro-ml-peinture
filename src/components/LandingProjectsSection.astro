@@ -1,0 +1,12 @@
+---
+import { getFixedT, type Locale } from '../i18n/i18n';
+interface Props { locale: Locale }
+const t = getFixedT(Astro.props.locale);
+const colors = ['bg-stone-100', 'bg-orange-100', 'bg-orange-800'];
+---
+<section class="bg-stone-900 px-5 py-20 text-white" aria-labelledby="materials-title">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div><h2 id="materials-title" class="font-serif text-4xl">{t('Projects.title')}</h2><p class="mt-6 leading-relaxed text-stone-300">{t('Projects.body')}</p></div>
+    <div class="grid grid-cols-3 gap-3">{colors.map((color, i) => <div><div class:list={['aspect-square rounded-t-full', color]} aria-hidden="true"></div><p class="mt-4 text-sm">{t(`Projects.swatch${i + 1}`)}</p></div>)}</div>
+  </div>
+</section>

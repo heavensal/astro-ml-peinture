@@ -1,104 +1,18 @@
 {
-	"Layout": {
-		"skipToContent": "Aller au contenu principal",
-		"ogImageAlt": "ML Entreprise Peinture — Artisan peintre à Marseille"
-	},
-	"LandingPage": {
-		"metaTitle": "ML Entreprise Peinture — Artisan peintre à Marseille | Devis gratuit",
-		"metaDescription": "Artisan peintre à Marseille et Bouches-du-Rhône avec 15 ans d'expérience. Rénovation appartement, maison, dégât des eaux. Devis sur mesure gratuit sous 24h."
-	},
-	"LanguageSwitcher": {
-		"ariaLabel": "Choisir la langue",
-		"labelFr": "FR",
-		"labelEn": "EN",
-		"titleFr": "Afficher le site en français",
-		"titleEn": "Afficher le site en anglais"
-	},
-	"HeroSection": {
-		"ariaLabel": "Accueil",
-		"eyebrow": "Artisan peintre • Marseille & Bouches-du-Rhône",
-		"tagline": "15 ans d'expérience au service de vos projets de rénovation. Assurance professionnelle. Devis gratuit sous 24h.",
-		"primaryCta": "Demander un devis",
-		"secondaryCta": "Nos services"
-	},
-	"LandingServices": {
-		"title": "Nos services",
-		"intro": "Une expertise complète pour tous vos travaux de peinture et de rénovation. Intervention sur Marseille et l'ensemble des Bouches-du-Rhône.",
-		"item1Title": "Rénovation d'appartement",
-		"item1Desc": "Remise à neuf complète de vos intérieurs : préparation des murs, peinture, finitions soignées pour un résultat impeccable.",
-		"item2Title": "Rénovation de maison",
-		"item2Desc": "Travaux de peinture intérieure et extérieure pour redonner vie à votre maison. Conseils personnalisés sur les couleurs et finitions.",
-		"item3Title": "Dégât des eaux",
-		"item3Desc": "Intervention rapide suite à un sinistre. Traitement des surfaces endommagées, remise en état et peinture de finition.",
-		"item4Title": "Traitement toute dégradation",
-		"item4Desc": "Réparation de fissures, moisissures, décollements. Traitement adapté à chaque support pour un résultat durable."
-	},
-	"LandingProcess": {
-		"title": "Comment ça marche",
-		"intro": "Un processus simple et transparent pour vos travaux de peinture, du premier contact à la réalisation.",
-		"step1Title": "Prise de contact",
-		"step1Desc": "Appelez-nous ou envoyez un email pour convenir d'un rendez-vous. Nous échangeons sur votre projet.",
-		"step2Title": "Visite sur place",
-		"step2Desc": "Rendez-vous physique sur le lieu des travaux pour évaluer les surfaces à rénover et comprendre vos attentes.",
-		"step3Title": "Relevé des dimensions",
-		"step3Desc": "Mesure précise des surfaces pour établir un chiffrage exact des travaux nécessaires.",
-		"step4Title": "Devis sur mesure",
-		"step4Desc": "Remise d'un devis détaillé, immédiat pour les petits travaux ou sous 24h pour les gros chantiers."
-	},
-	"LandingReviews": {
-		"title": "Ils nous font confiance",
-		"intro": "De nombreux clients satisfaits sur Made In Marseille et dans toute la région.",
-		"review1Quote": "Travail soigné et propre. L'équipe a su respecter les délais et le budget annoncé. Je recommande vivement.",
-		"review1Author": "Marie L.",
-		"review1Role": "Rénovation appartement T3, Marseille 8e",
-		"review2Quote": "Intervention rapide suite à un dégât des eaux. Résultat impeccable, on ne voit plus rien. Très professionnel.",
-		"review2Author": "Thomas D.",
-		"review2Role": "Sinistre eau, Aix-en-Provence",
-		"review3Quote": "Excellent rapport qualité-prix. Les conseils sur les couleurs étaient pertinents. Ma maison est transformée.",
-		"review3Author": "Sophie M.",
-		"review3Role": "Rénovation maison, La Ciotat"
-	},
-	"LandingFaq": {
-		"title": "Questions fréquentes",
-		"intro": "Quelques réponses rapides aux questions les plus courantes sur nos prestations.",
-		"item1Question": "Quelles zones géographiques couvrez-vous ?",
-		"item1Answer": "Nous intervenons sur Marseille et l'ensemble du département des Bouches-du-Rhône (13). Aix-en-Provence, La Ciotat, Aubagne, Martigues, et toutes les communes environnantes.",
-		"item2Question": "Êtes-vous assuré pour les travaux ?",
-		"item2Answer": "Oui, nous disposons d'une assurance responsabilité civile professionnelle qui couvre l'ensemble de nos interventions. Vous pouvez demander une attestation.",
-		"item3Question": "Combien de temps pour recevoir un devis ?",
-		"item3Answer": "Pour les petits travaux, le devis est établi immédiatement après la visite. Pour les chantiers plus importants, vous recevez votre devis détaillé sous 24 heures maximum.",
-		"item4Question": "Intervenez-vous pour les particuliers et les professionnels ?",
-		"item4Answer": "Oui, nous travaillons aussi bien pour les particuliers que pour les syndics, agences immobilières et entreprises. Chaque projet bénéficie de la même attention.",
-		"moreQuestions": "Vous avez d'autres questions ?",
-		"contactCta": "Contactez-nous"
-	},
-	"LandingContact": {
-		"title": "Demandez votre devis gratuit",
-		"intro": "Contactez-nous par téléphone ou par email pour discuter de votre projet. Nous vous rappelons rapidement pour fixer un rendez-vous sur place.",
-		"emailCta": "Nous écrire"
-	},
-	"ContactForm": {
-		"openCta": "Demander un devis",
-		"dialogTitle": "Demande de devis",
-		"fieldName": "Nom",
-		"fieldEmail": "Email",
-		"fieldPhone": "Téléphone",
-		"fieldMessage": "Votre projet",
-		"messagePlaceholder": "Type de travaux, surface, délais souhaités, adresse du chantier…",
-		"submit": "Envoyer",
-		"close": "Fermer",
-		"sending": "Envoi en cours…",
-		"success": "Merci ! Votre message a bien été transmis.",
-		"error": "L'envoi a échoué. Réessayez ou appelez-nous.",
-		"errorNetwork": "Erreur réseau. Vérifiez votre connexion.",
-		"errorConfig": "Le formulaire n’est pas configuré (PUBLIC_CONTACT_FORM_URL ou PUBLIC_CONTACT_FORM_TOKEN manquant).",
-		"emailSubject": "Devis — ML Entreprise Peinture"
-	},
-	"SiteFooter": {
-		"tagline": "Artisan peintre à Marseille — 15 ans d'expérience — Assurance Pro",
-		"navAriaLabel": "Mentions légales et politiques",
-		"linkLegalNotice": "Mentions légales",
-		"linkPrivacyPolicy": "Politique de confidentialité",
-		"linkTermsOfService": "Conditions générales"
-	}
+  "Layout": {"skipToContent": "Aller au contenu principal", "ogImageAlt": "ML Entreprise Peinture — Artisan peintre à Marseille"},
+  "LandingPage": {"metaTitle": "ML Entreprise Peinture | Peinture et rénovation à Marseille", "metaDescription": "Travaux de peinture et rénovation à Marseille : murs, plafonds, appartements et maisons. Présentez votre projet à ML Entreprise Peinture pour un devis adapté."},
+  "LanguageSwitcher": {"ariaLabel": "Choisir la langue", "labelFr": "FR", "labelEn": "EN", "titleFr": "Afficher le site en français", "titleEn": "Afficher le site en anglais"},
+  "HeroSection": {"ariaLabel": "Accueil", "eyebrow": "Artisan peintre • Marseille & Bouches-du-Rhône", "tagline": "Peinture, préparation des supports et rénovation. À Marseille, donnons forme à votre projet, de la première idée aux dernières finitions.", "primaryCta": "Demander un devis", "secondaryCta": "Nos services", "title": "Une nouvelle vie pour vos intérieurs.", "visual": "Palette de matières et de couleurs — illustration", "caption": "Des teintes justes. Des finitions soignées."},
+  "LandingServices": {"title": "Nos services", "intro": "Une expertise complète pour tous vos travaux de peinture et de rénovation. Intervention sur Marseille et l'ensemble des Bouches-du-Rhône.", "item1Title": "Rénovation d'appartement", "item1Desc": "Remise à neuf complète de vos intérieurs : préparation des murs, peinture, finitions soignées pour un résultat impeccable.", "item2Title": "Rénovation de maison", "item2Desc": "Travaux de peinture intérieure et extérieure pour redonner vie à votre maison. Conseils personnalisés sur les couleurs et finitions.", "item3Title": "Dégât des eaux", "item3Desc": "Préparation et remise en peinture des surfaces après résolution de la fuite et séchage du support.", "item4Title": "Traitement toute dégradation", "item4Desc": "Préparation des supports et reprise des défauts de surface, après évaluation de leur cause et de leur état."},
+  "LandingProcess": {"title": "Comment ça marche", "intro": "Un processus simple et transparent pour vos travaux de peinture, du premier contact à la réalisation.", "step1Title": "Prise de contact", "step1Desc": "Appelez-nous ou envoyez un email pour convenir d'un rendez-vous. Nous échangeons sur votre projet.", "step2Title": "Visite sur place", "step2Desc": "Rendez-vous physique sur le lieu des travaux pour évaluer les surfaces à rénover et comprendre vos attentes.", "step3Title": "Relevé des dimensions", "step3Desc": "Mesure précise des surfaces pour établir un chiffrage exact des travaux nécessaires.", "step4Title": "Devis sur mesure", "step4Desc": "Un devis détaillé précise les travaux, les fournitures et le calendrier à convenir ensemble."},
+  "LandingReviews": {"title": "Vos retours sur nos réalisations", "intro": "Les témoignages de nos clients."},
+  "LandingFaq": {"title": "Vos questions", "intro": "Les réponses à vos questions sur les travaux."},
+  "LandingContact": {"title": "Votre projet commence ici.", "intro": "Une pièce à rafraîchir, un appartement à rénover ? Décrivez les surfaces, leur état et vos envies. Nous étudierons ensemble les travaux à prévoir.", "emailCta": "Nous écrire"},
+  "ContactForm": {"openCta": "Demander un devis", "dialogTitle": "Demande de devis", "fieldName": "Nom complet", "fieldEmail": "Email", "fieldPhone": "Téléphone", "fieldMessage": "Décrivez votre projet", "messagePlaceholder": "État des murs, pièces concernées, finitions souhaitées…", "submit": "Envoyer", "close": "Fermer", "sending": "Envoi en cours…", "success": "Merci ! Votre message a bien été transmis.", "error": "L'envoi a échoué. Réessayez ou appelez-nous.", "errorNetwork": "Erreur réseau. Vérifiez votre connexion.", "errorConfig": "Le formulaire est momentanément indisponible. Contactez-nous par téléphone ou par email.", "emailSubject": "Devis — ML Entreprise Peinture", "fieldCity": "Commune / code postal du chantier", "fieldService": "Type de travaux", "fieldSurface": "Surface approximative (m², facultatif)", "fieldTimeline": "Période souhaitée (facultatif)", "fieldPhotos": "Photos du chantier (facultatif)", "photosHelp": "3 photos maximum · JPEG, PNG ou WebP · 25 Mo par photo avant compression. Évitez les visages et documents personnels.", "privacy": "J’ai lu les informations sur le traitement de mes données pour cette demande.", "privacyLink": "Politique de confidentialité", "errorPhotos": "Vérifiez vos photos : 3 fichiers maximum, JPEG, PNG ou WebP, 25 Mo chacun.", "noJs": "Pour nous contacter, utilisez le téléphone ou l’email indiqués sur cette page.", "choose": "Choisissez votre projet", "fieldWebsite": "Laisser ce champ vide"},
+  "SiteFooter": {"tagline": "Peinture & rénovation · Marseille et Bouches-du-Rhône", "navAriaLabel": "Mentions légales et politiques", "linkLegalNotice": "Mentions légales", "linkPrivacyPolicy": "Politique de confidentialité", "linkTermsOfService": "Conditions générales"},
+  "Navigation": {"label": "Navigation principale", "services": "Savoir-faire", "process": "Votre chantier", "contact": "Parlons de votre projet", "home": "Accueil"},
+  "Areas": {"title": "Un projet à Marseille ou dans les environs ?", "body": "Indiquez la commune de votre chantier lors de votre demande. Nous confirmerons avec vous les possibilités d’intervention.", "label": "Notre secteur"},
+  "Projects": {"title": "Les matières donnent le ton.", "body": "Murs, plafonds, boiseries : chaque support mérite une préparation adaptée. Le choix des teintes et des finitions vient ensuite donner son caractère à votre intérieur.", "caption": "Illustration de palette — aucune réalisation client présentée.", "swatch1": "Blanc minéral", "swatch2": "Sable naturel", "swatch3": "Terre cuite"},
+  "NotFound": {"title": "Cette page est introuvable", "body": "Retrouvez nos prestations et nos coordonnées depuis l’accueil.", "back": "Retour à l’accueil"},
+  "Legal": {"back": "Retour à l’accueil", "draft": "Document en cours de finalisation. Les informations entre crochets doivent être complétées avant la mise en ligne.", "contact": "Contact", "legalTitle": "Mentions légales", "privacyTitle": "Politique de confidentialité", "termsTitle": "Conditions générales", "legalDescription": "Informations sur l’éditeur et l’hébergement du site ML Entreprise Peinture.", "privacyDescription": "Informations sur les données transmises dans les demandes de devis.", "termsDescription": "Conditions des prestations de ML Entreprise Peinture.", "legalSections": [{"title": "Éditeur", "body": "[À compléter : raison sociale exacte, forme juridique, adresse professionnelle, SIRET à 14 chiffres, TVA le cas échéant et responsable de publication.]"}, {"title": "Hébergement", "body": "[À compléter : identité, adresse et coordonnées de l’hébergeur de production.]"}, {"title": "Assurances et médiation", "body": "[À compléter : assurances applicables aux prestations, coordonnées de l’assureur, couverture géographique et médiateur de la consommation.]"}], "privacySections": [{"title": "Données de votre demande", "body": "Le formulaire transmet votre nom, email, téléphone, commune, type de travaux, message et, si vous les renseignez, surface, période souhaitée et photos. Ces informations servent à étudier votre demande et à vous recontacter."}, {"title": "Traitement et conservation", "body": "[À compléter : identité du responsable, base légale retenue, durée de conservation, destinataires, hébergement de ContentForge et de la messagerie, transferts éventuels et garanties.]"}, {"title": "Vos demandes concernant vos données", "body": "Contactez-nous aux coordonnées ci-dessous pour toute demande concernant vos données. Vous pouvez également consulter la CNIL sur cnil.fr."}, {"title": "Cookies et mesure d’audience", "body": "Cette version n’intègre aucun outil de mesure d’audience ni traceur publicitaire. [À confirmer après vérification des services ajoutés lors du déploiement.]"}], "termsSections": [{"title": "Prestations et devis", "body": "Les travaux de peinture et de rénovation font l’objet d’un devis adapté au chantier. Une demande envoyée depuis ce site ne vaut pas commande."}, {"title": "Conditions à compléter", "body": "[À compléter : validité des devis, acompte, TVA, paiement, calendrier, réception, garanties, rétractation applicable et modalités de règlement des litiges.]"}]}
 }

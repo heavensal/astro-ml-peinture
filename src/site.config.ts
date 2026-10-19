@@ -7,14 +7,15 @@
 export const siteConfig = {
 	// SEO: Site identity
 	/** Displayed name (meta tags, footer, Open Graph) */
+	// TODO: Confirm the existing company name, contact details and registration with the owner.
 	name: 'ML Entreprise Peinture',
 	/** Short phrase below main title */
-	tagline: "Artisan peintre à Marseille — 15 ans d'expérience",
+	tagline: "Peinture et rénovation à Marseille",
 
 	// SEO: Meta description (150-160 chars recommended)
 	/** Default meta description for search engines */
 	defaultDescription:
-		'ML Entreprise Peinture, artisan peintre à Marseille et Bouches-du-Rhône. Rénovation appartement, maison, dégât des eaux. Devis gratuit sous 24h.',
+		'ML Entreprise Peinture, artisan peintre à Marseille et Bouches-du-Rhône. Rénovation appartement, maison, dégât des eaux. Parlons de votre projet.',
 
 	// SEO: Language and locale
 	lang: 'fr',
@@ -53,5 +54,10 @@ export const siteConfig = {
 	 * After deployment, can be `https://your-domain.com/og-image.jpg` if you add the file to public/.
 	 */
 	// SEO: Update ogImageUrl after deploying to final domain
-	ogImageUrl: '',
+	ogImageUrl: '/og.png',
+	// TODO: Confirm the address, service radius, business registration and insurance.
+	address: '',
+	postalCode: '',
+	city: 'Marseille',
+	serviceAreas: ['Marseille', 'Bouches-du-Rhône'],
 } as const;

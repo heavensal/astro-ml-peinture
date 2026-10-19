@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getFixedT } from '../i18n/i18n';
+import { pageHref } from '../lib/paths';
+const t = getFixedT('fr');
+---
+<Layout title={t('NotFound.title')} robots="noindex, follow">
+  <main id="main-content" class="mx-auto max-w-3xl px-5 py-24"><h1 class="font-serif text-4xl">{t('NotFound.title')}</h1><p class="my-6">{t('NotFound.body')}</p><a class="underline" href={pageHref('')}>{t('NotFound.back')}</a></main>
+</Layout>

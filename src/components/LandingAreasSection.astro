@@ -1,0 +1,8 @@
+---
+import { getFixedT, type Locale } from '../i18n/i18n';
+interface Props { locale: Locale }
+const t = getFixedT(Astro.props.locale);
+---
+<section class="bg-stone-100 px-5 py-16" aria-labelledby="areas-title">
+  <div class="mx-auto max-w-4xl"><p class="mb-4 text-sm font-semibold uppercase tracking-widest text-orange-800">{t('Areas.label')}</p><h2 id="areas-title" class="font-serif text-3xl md:text-4xl">{t('Areas.title')}</h2><p class="mt-5 max-w-2xl text-stone-600">{t('Areas.body')}</p></div>
+</section>
