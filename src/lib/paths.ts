@@ -9,7 +9,7 @@ export function pageHref(path: string): string {
 export const pageRoutes = {
 	home: '',
 	englishHome: 'en/',
-	legalNotice: 'legal-notice',
-	privacyPolicy: 'privacy-policy',
-	termsOfService: 'terms-of-service',
+	legalNotice: 'mentions-legales/',
+	privacyPolicy: 'politique-de-confidentialite/',
+	termsOfService: 'conditions-generales/',
 } as const;

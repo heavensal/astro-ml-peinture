@@ -1,0 +1,18 @@
+---
+import { getFixedT, type Locale } from '../i18n/i18n';
+import { pageHref } from '../lib/paths';
+import { siteConfig } from '../site.config';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = getFixedT(locale);
+---
+<header class="border-b border-stone-200 bg-stone-50 px-5 py-5">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-5">
+    <a href={pageHref('')} class="text-lg font-bold tracking-tight text-stone-900">{siteConfig.name}</a>
+    <nav aria-label={t('Navigation.label')} class="flex flex-wrap items-center gap-5 text-sm font-medium">
+      <a href={pageHref('#services')} class="hover:text-orange-700">{t('Navigation.services')}</a>
+      <a href={pageHref('#process')} class="hover:text-orange-700">{t('Navigation.process')}</a>
+      <a href={pageHref('#contact')} class="rounded-full bg-stone-900 px-5 py-3 text-white hover:bg-orange-700">{t('Navigation.contact')}</a>
+    </nav>
+  </div>
+</header>

@@ -1,16 +1,14 @@
 {
-  "name": "[Site name — to modify]",
-  "short_name": "[Short name — to modify]",
-  "description": "[Site description — to modify]",
-  "start_url": "/landing-page-template/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#047857",
+  "name": "ML Entreprise Peinture",
+  "short_name": "ML Peinture",
+  "display": "browser",
+  "background_color": "#fafaf9",
+  "theme_color": "#9a3412",
   "icons": [
     {
       "src": "favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "any"
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 }

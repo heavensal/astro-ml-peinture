@@ -1,35 +1,16 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import { existsSync } from 'node:fs';
+import { loadEnvFile } from 'node:process';
+if (existsSync('.env')) loadEnvFile('.env');
 import tailwind from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-
-/**
- * Astro configuration for landing page template.
- *
- * SEO: Update SITE and BASE when deploying to production.
- *
- * Deployment scenarios:
- * - GitHub Pages project repo: SITE = 'https://USER.github.io', BASE = '/repo-name/'
- * - GitHub Pages user repo: SITE = 'https://USER.github.io', BASE = '/'
- * - Custom domain: SITE = 'https://your-domain.tld', BASE = '/'
- */
-
-// SEO: Production site URL (affects canonical URLs, sitemap, Open Graph)
-const SITE = 'https://heavensal.github.io';
-
-// SEO: Base path (repo name for GitHub Pages, '/' for custom domain)
-const BASE = '/astro-ml-peinture/';
-
-// https://astro.build/config
+const env = process.env;
+// TODO: Confirm the final domain before enabling search indexing.
+const site = env.SITE_URL || 'https://heavensal.github.io';
+const base = env.SITE_BASE || '/astro-ml-peinture/';
 export default defineConfig({
-	site: SITE,
-	base: BASE,
-	integrations: [sitemap()],
-	prefetch: {
-		prefetchAll: true,
-		defaultStrategy: 'viewport',
-	},
-	vite: {
-		plugins: [tailwind()],
-	},
+  site, base, trailingSlash: 'always',
+  integrations: [sitemap({ filter: (url) => env.PUBLIC_SITE_INDEXABLE === 'true' &&
+    !/\/(404|mentions-legales|politique-de-confidentialite|conditions-generales|legal-notice|privacy-policy|terms-of-service)\/?$/.test(url) })],
+  vite: { plugins: [tailwind()] },
 });

@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import { existsSync, readFileSync } from 'node:fs';
+const html = readFileSync('dist/index.html', 'utf8');
+assert.match(html, /<html lang="fr"/);
+assert.equal((html.match(/<h1\b/g) || []).length, 1);
+assert.ok(!existsSync('dist/en/index.html'), 'French-only build must not publish English duplicates');
+assert.ok(!existsSync('dist/blog/index.html'), 'Blog must remain unpublished');
+assert.match(html, /HousePainter/);
+assert.match(html, /rel="canonical"/);
+assert.match(html, /og:image/);
+assert.ok(existsSync('dist/og.png'));
+assert.ok(existsSync('dist/mentions-legales/index.html'));
+assert.ok(!html.includes('Marie L.'), 'Never publish template testimonials');
+for (const match of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) JSON.parse(match[1]);
+console.log('Built HTML checks passed: FR, canonical, JSON-LD, OG, legal routes, no fake reviews or blog.');

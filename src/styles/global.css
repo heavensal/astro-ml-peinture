@@ -30,3 +30,10 @@
 	outline: 2px solid currentColor;
 	outline-offset: 2px;
 }
+
+:focus-visible { outline: 3px solid #c2410c; outline-offset: 4px; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body:has(dialog[open]) { overflow: hidden; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

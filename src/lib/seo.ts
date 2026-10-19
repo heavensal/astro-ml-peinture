@@ -1,45 +1,33 @@
 import { siteConfig } from '../site.config';
 
-/** Canonical URLs for FR / EN (using Astro's `site` + `base`). */
-export function getAlternateLanguageUrls(
-	site: URL | undefined,
-): { fr: string; en: string } | undefined {
-	if (!site) return undefined;
-	const base = import.meta.env.BASE_URL;
-	const fr = new URL(base, site).href;
-	const en = new URL(`${base}en/`, site).href;
-	return { fr, en };
+export function getAlternateLanguageUrls(site: URL | undefined) {
+  if (!site) return undefined;
+  return { fr: new URL(import.meta.env.BASE_URL, site).href };
 }
 
-/** JSON-LD structured data for landing page (Organization + WebSite). */
-export function buildLandingJsonLd(alternates: {
-	fr: string;
-	en: string;
-}): Record<string, unknown> {
-	const orgId = `${alternates.fr}#organization`;
-	const organization: Record<string, unknown> = {
-		'@type': 'Organization',
-		'@id': orgId,
-		name: siteConfig.name,
-		url: alternates.fr,
-		email: siteConfig.contact.email,
-		telephone: siteConfig.contact.phone,
-	};
-	if (siteConfig.sameAs.length > 0) {
-		organization.sameAs = [...siteConfig.sameAs];
-	}
-	return {
-		'@context': 'https://schema.org',
-		'@graph': [
-			organization,
-			{
-				'@type': 'WebSite',
-				'@id': `${alternates.fr}#website`,
-				url: alternates.fr,
-				name: siteConfig.name,
-				inLanguage: ['fr-FR', 'en-US'],
-				publisher: { '@id': orgId },
-			},
-		],
-	};
+/** SEO/GEO: one consistent business entity, no invented reviews, prices or address. */
+export function buildLandingJsonLd(alternates: { fr: string }): Record<string, unknown> {
+  const url = alternates.fr;
+  const businessId = `${url}#business`;
+  const business: Record<string, unknown> = {
+    '@type': 'HousePainter', '@id': businessId, name: siteConfig.name, url,
+    telephone: siteConfig.contact.phone, email: siteConfig.contact.email,
+    areaServed: siteConfig.serviceAreas.map(name => ({ '@type': 'AdministrativeArea', name })),
+    ...(siteConfig.sameAs.length ? { sameAs: siteConfig.sameAs } : {}),
+  };
+  // TODO: Add the verified public business address and opening hours when supplied.
+  if (siteConfig.address && siteConfig.postalCode) business.address = {
+    '@type': 'PostalAddress', streetAddress: siteConfig.address,
+    postalCode: siteConfig.postalCode, addressLocality: siteConfig.city, addressCountry: 'FR',
+  };
+  return {
+    '@context': 'https://schema.org', '@graph': [business,
+      { '@type': 'WebSite', '@id': `${url}#website`, url, name: siteConfig.name,
+        inLanguage: 'fr-FR', publisher: { '@id': businessId } },
+      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: siteConfig.name,
+        inLanguage: 'fr-FR', isPartOf: { '@id': `${url}#website` }, about: { '@id': businessId } },
+      { '@type': 'Service', '@id': `${url}#painting`, name: 'Peinture et rénovation',
+        serviceType: 'Travaux de peinture', provider: { '@id': businessId }, url: `${url}#services` },
+    ],
+  };
 }
